@@ -1,0 +1,67 @@
+.alignment{
+    height: 5em;
+    width:5em;
+    padding:5px;
+}
+
+.button{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.main {
+    background-color:whitesmoke;
+}
+#new{
+    background-color:white;
+    margin-top: 2%;
+    margin-bottom: 5%;
+    margin-left: 4%;
+    margin-right: 7%;
+    width: 90%;
+    height: 200em;
+    padding: 10em;
+}
+#na{
+    margin-left: 1000%;
+}
+
+
+img{
+    max-width:180px;
+  }
+  input[type=file]{
+  padding:10px;
+  }
+  .image-upload > input
+{
+    display: none;
+}
+
+.image-upload img
+{
+    width: 80px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+.image-upload > input
+{
+
+    display: none;
+}
+.image-upload{
+    display: inline;
+}
+
+.image-upload img
+{
+    width: 80px;
+    cursor: pointer;
+}
+

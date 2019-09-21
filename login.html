@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="login.css" />
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Thambi&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class = "bg-gradient landing polygon-deco">
+        <div class = "navigation-bar">
+            
+        </div>
+        <div class = "main-content">
+            <div class = "main-text">
+                <h1>KARPALAGAI<br>கற்பலகை</h1>
+               <h3 ><p class = "text-focus-in">Real-Time Whiteboard.</p></h3>
+            </div>
+            <div class = "card fade-in">
+                <h3>LOGIN/SIGNUP</h3>
+                <form class = "card-form" onsubmit= 'sendData(); return false;'>
+                    <input id = "email" type = "email" placeholder = "Email" class = "text-box">
+                    <input id = "password" type = "password" placeholder = "Password" class = "text-box">
+                    <button type = "submit" size = 40 class = "form-button">Submit</button>
+                </form>       
+            </div>
+        </div>
+    </div>
+    <script>
+        function sendData(){
+            var data = {
+                    email: document.getElementById("email").value,
+                    password: document.getElementById("password").value
+                }
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function(){
+                if(this.readyState == 4 && this.status == 200){
+                    alert('success');
+                    location.replace('./index.html')
+                }
+            }
+            xhttp.open("POST", "http://localhost:3000/createuser", true);
+            xhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+            xhttp.send(JSON.stringify(data));
+        }
+    
+    </script>
+</body>
+</html>
